@@ -18,7 +18,6 @@ const success = (position) => {
     const coords = position.coords;
     result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`; if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
         myLocation.textContent = "Your at Home";
-        // window.open("https://www.itmabna.com");
     } else {
         myLocation.textContent = "Your Not at Home"
     }
