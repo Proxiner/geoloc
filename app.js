@@ -25,9 +25,9 @@ function sendMail() {
 
     emailjs.send('service_way4a31', 'template_il71eei', templateParams)
         .then(function (response) {
-            console.log('گزارش داده شد!', response.status, response.text);
+            alert('گزارش داده شد!', response.status, response.text);
         }, function (error) {
-            console.log('به مشکل بر خوردید!', error);
+            alert('به مشکل بر خوردید!', error);
         });
 }
 
