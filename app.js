@@ -1,18 +1,3 @@
-
-//if it broken it "var" to "let"
-
-let timer = null;
-
-window.addEventListener('blur', function () {
-
-    timer = setInterval(function () {
-
-        window.location.reload(1);
-
-    }, 3000)
-
-}, false);
-
 let locations = {
     // homeLat: 35.6719733,
     // homeLong: 51.0401086,
