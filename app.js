@@ -21,7 +21,7 @@ const success = (position) => {
 
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
         myLocation.textContent = "Your at Home";
-        setTimeout(window.open("https://www.itmabna.com"), 2000);
+        // setTimeout(window.open("https://www.itmabna.com"), 2000);
     } else {
         myLocation.textContent = "Your Not at Home"
     }
