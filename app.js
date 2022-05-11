@@ -1,4 +1,3 @@
-navigator.geolocation.getCurrentPosition(success, error, options);
 
 const options = {
     maximumAge: 0,
@@ -18,6 +17,8 @@ const success = (position) => {
 const error = (errorLog) => {
     console.log(errorLog);
 }
+
+navigator.geolocation.getCurrentPosition(success, error, options);
 
 // const locations = {
 //     homeLat: 48.856614,
