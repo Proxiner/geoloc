@@ -1,15 +1,16 @@
 
+const options = {
+    maximumAge: 0,
+    enableHighAccuracy: false,
+    timeout: 15000,
+}
+
+
 const locations = {
     homeLat: 48.856614,
     homeLong: 2.3522219,
     officeLat: null,
     officeLong: null,
-}
-
-const options = {
-    maximumAge: 0,
-    enableHighAccuracy: false,
-    timeout: 15000,
 }
 
 const success = (position) => {
