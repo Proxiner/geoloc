@@ -1,4 +1,17 @@
 
+var timer = null;
+
+//when the window is minimized or when user is in different tab . 
+window.addEventListener('blur', function () {
+
+    timer = setInterval(function () {
+
+        window.location.reload(1);
+
+    }, 5000)
+
+}, false);
+
 let locations = {
     // homeLat: 35.6719733,
     // homeLong: 51.0401086,
