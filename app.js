@@ -20,8 +20,6 @@ const success = (position) => {
 
     let myLocation = document.querySelector("#location");
     const coords = position.coords;
-    alert(`lat : ${Math.round(coords.latitude)} & Long : ${Math.round(coords.longitude)}`)
-
 
     if (Math.round(coords.latitude) === locations.homeLat && Math.round(coords.longitude) === locations.homeLong) {
         myLocation.textContent = "Your at Home";
