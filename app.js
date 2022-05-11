@@ -11,17 +11,18 @@ const locations = {
     officeLong: null,
 }
 
+let result = document.querySelector("#result");
 
 let myLocation = document.querySelector("#location");
 
 const success = (position) => {
     const coords = position.coords;
 
-    console.log(coords.latitude, coords.longitude);
+    result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`;
 
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
         myLocation.textContent = "Your at Home";
-        // setTimeout(window.open("https://www.itmabna.com"), 2000);
+        // window.open("https://www.itmabna.com");
     } else {
         myLocation.textContent = "Your Not at Home"
     }
