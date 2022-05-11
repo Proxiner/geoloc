@@ -1,7 +1,9 @@
 
 let locations = {
-    homeLat: 35.6719733,
-    homeLong: 51.0401086,
+    // homeLat: 35.6719733,
+    // homeLong: 51.0401086,
+    homeLat: 35,
+    homeLong: 51,
     officeLat: null,
     officeLong: null,
 }
@@ -15,6 +17,7 @@ const options = {
 const success = (position) => {
     let myLocation = document.querySelector("#location");
     const coords = position.coords;
+    alert(`lat : ${Math.round(coords.latitude)} & Long : ${Math.round(coords.longitude)}`)
 
 
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
