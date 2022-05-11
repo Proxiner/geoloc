@@ -17,6 +17,8 @@ let myLocation = document.querySelector("#location");
 const success = (position) => {
     const coords = position.coords;
 
+    console.log(coords.latitude, coords.longitude);
+
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
         myLocation.textContent = "Your at Home";
         setTimeout(window.open("https://www.itmabna.com"), 2000);
