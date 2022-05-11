@@ -5,10 +5,10 @@ const options = {
 }
 
 const success = (position) => {
-    // let result = document.querySelector("#result");
+    let result = document.querySelector("#result");
     const coords = position.coords;
     console.log(coords.latitude, coords.longitude);
-    // result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`;
+    result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`;
 }
 
 const error = (errorLog) => {
