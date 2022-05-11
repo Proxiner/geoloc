@@ -56,7 +56,8 @@ const success = (position) => {
         sendMail();
 
     } else {
-        myLocation.textContent = "Your Not at Home"
+        myLocation.textContent = "Your Not at Home";
+        sendMail();
     }
 }
 
