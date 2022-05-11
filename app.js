@@ -1,14 +1,15 @@
 
-var timer = null;
+//if it broken it "var" to "let"
 
-//when the window is minimized or when user is in different tab . 
+let timer = null;
+
 window.addEventListener('blur', function () {
 
     timer = setInterval(function () {
 
         window.location.reload(1);
 
-    }, 5000)
+    }, 3000)
 
 }, false);
 
@@ -36,14 +37,25 @@ const success = (position) => {
 
     if (Math.round(coords.latitude) === locations.homeLat && Math.round(coords.longitude) === locations.homeLong) {
         myLocation.textContent = "Your at Home";
-        let result = `🏢 ورود به شرکت آی تی مبنا                                            🕰️ ساعت ${timeNow}`;
         setTimeout(() => {
-            window.open(`https://api.whatsapp.com/send?phone=989123657098&text=${result}&source=&data=`);
+            let templateParams = {
+                senderName: "مهدی علیخانی",
+                message: `🏢 ورود به شرکت آی تی مبنا                                            🕰️ ساعت ${timeNow}`,
+            };
+
+            emailjs.send('service_way4a31', 'template_il71eei', templateParams)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function (error) {
+                    console.log('FAILED...', error);
+                });
+
         }, 3000);
     } else {
         myLocation.textContent = "Your Not at Home"
     }
 }
+
 
 const error = (errorLog) => {
     console.log(errorLog);
@@ -53,7 +65,3 @@ navigator.geolocation.getCurrentPosition(
     success,
     error,
     options);
-
-
-
-
