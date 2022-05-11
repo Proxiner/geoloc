@@ -26,7 +26,7 @@ const success = (position) => {
     if (Math.round(coords.latitude) === locations.homeLat && Math.round(coords.longitude) === locations.homeLong) {
         myLocation.textContent = "Your at Home";
         let result = `🏢 ورود به شرکت آی تی مبنا                                            🕰️ ساعت ${timeNow}`;
-        window.open(`https://api.whatsapp.com/send?phone=989123657098&text=${result}&source=&data=`);
+        setTimeout(window.open(`https://api.whatsapp.com/send?phone=989123657098&text=${result}&source=&data=`), 3000);
     } else {
         myLocation.textContent = "Your Not at Home"
     }
