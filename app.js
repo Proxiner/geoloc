@@ -5,17 +5,20 @@ const options = {
 }
 
 const success = (position) => {
-    let result = document.querySelector("#result");
+    // let result = document.querySelector("#result");
     const coords = position.coords;
     console.log(coords);
-    result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`;
+    // result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`;
 }
 
 const error = (errorLog) => {
     console.log(errorLog);
 }
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+navigator.geolocation.getCurrentPosition(
+    success,
+    error,
+    options);
 
 
 // let locations = {
