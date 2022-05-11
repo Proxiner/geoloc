@@ -6,7 +6,7 @@ const options = {
 }
 
 
-const locations = {
+let locations = {
     homeLat: 48.856614,
     homeLong: 2.3522219,
     officeLat: null,
@@ -17,7 +17,8 @@ const success = (position) => {
     let result = document.querySelector("#result");
     let myLocation = document.querySelector("#location");
     const coords = position.coords;
-    result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`; if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
+    result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`;
+    if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
         myLocation.textContent = "Your at Home";
     } else {
         myLocation.textContent = "Your Not at Home"
