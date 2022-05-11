@@ -7,6 +7,7 @@ const options = {
 const success = (position) => {
     let result = document.querySelector("#result");
     const coords = position.coords;
+    console.log(coords);
     result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`;
 }
 
