@@ -13,14 +13,14 @@ const locations = {
 
 const result = document.querySelector("#result");
 
-const location = document.querySelector("#location");
+let myLocation = document.querySelector("#location");
 
 const success = (position) => {
     const coords = position.coords;
     result.textContent = `latitude : ${coords.latitude} & longitude : ${coords.longitude}`;
 
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
-        location.textContent = "Your at home";
+        myLocation.textContent = "Your at home";
     }
 }
 
