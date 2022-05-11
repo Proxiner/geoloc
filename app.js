@@ -5,11 +5,10 @@ const options = {
     timeout: 15000,
 }
 
-let result = document.querySelector("#result");
-
-
 const success = (position) => {
-    let coords = position.coords;
+    let result = document.querySelector("#result");
+    const coords = position.coords;
+    console.log(coords)
     result.textContent = `Latitude : ${coords.latitude} & Longitude : ${coords.longitude}`;
 }
 
