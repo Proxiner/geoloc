@@ -5,7 +5,7 @@ const options = {
 }
 
 const locations = {
-    homeLat: 48.856614,
+    homeLat: 48.856624,
     homeLong: 2.3522219,
     officeLat: null,
     officeLong: null,
@@ -20,7 +20,9 @@ const success = (position) => {
     result.textContent = `latitude : ${coords.latitude} & longitude : ${coords.longitude}`;
 
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
-        myLocation.textContent = "Your at home";
+        myLocation.textContent = "Your at Home";
+    } else {
+        myLocation.textContent = "Your Not at Home"
     }
 }
 
