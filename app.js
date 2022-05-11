@@ -46,6 +46,7 @@ function sendMail() {
         });
 }
 
+
 const success = (position) => {
 
     let myLocation = document.querySelector("#location");
@@ -57,7 +58,6 @@ const success = (position) => {
 
     } else {
         myLocation.textContent = "Your Not at Home";
-        sendMail();
     }
 }
 
