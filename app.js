@@ -40,9 +40,9 @@ function sendMail() {
 
     emailjs.send('service_way4a31', 'template_il71eei', templateParams)
         .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
+            alert('SUCCESS!', response.status, response.text);
         }, function (error) {
-            console.log('FAILED...', error);
+            alert('FAILED...', error);
         });
 }
 
