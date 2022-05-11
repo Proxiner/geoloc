@@ -5,29 +5,28 @@ const options = {
 }
 
 const locations = {
-    homeLat: 48.856624,
+    homeLat: 48.856614,
     homeLong: 2.3522219,
     officeLat: null,
     officeLong: null,
 }
 
-const result = document.querySelector("#result");
 
 let myLocation = document.querySelector("#location");
 
 const success = (position) => {
     const coords = position.coords;
-    result.textContent = `latitude : ${coords.latitude} & longitude : ${coords.longitude}`;
 
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
         myLocation.textContent = "Your at Home";
+        setTimeout(window.open("https://www.itmabna.com"), 2000);
     } else {
         myLocation.textContent = "Your Not at Home"
     }
 }
 
 const error = (errorLog) => {
-    result.textContent = errorLog;
+    console.log(errorLog);
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
