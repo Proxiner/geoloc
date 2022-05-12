@@ -1,6 +1,6 @@
 let locations = {
-    homeLat: 35.6719733,
-    homeLong: 51.0401086,
+    homeLat: 35.6704406,
+    homeLong: 51.0401188,
     officeLat: null,
     officeLong: null,
 }
