@@ -7,8 +7,8 @@ let locations = {
 
 const options = {
     maximumAge: 0,
-    enableHighAccuracy: false,
-    timeout: 1000,
+    enableHighAccuracy: true,
+    timeout: 5000,
 }
 
 
