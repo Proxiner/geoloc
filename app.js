@@ -15,19 +15,19 @@ const options = {
 let today = new Date();
 let timeNow = today.getHours() + ":" + ("0" + today.getMinutes()).slice(-2);
 
-// function sendMail() {
-//     let templateParams = {
-//         senderName: "مهدی علیخانی",
-//         message: `🏢 ورود به شرکت آی تی مبنا                                            🕰️ ساعت ${timeNow}`,
-//     };
+function sendMail() {
+    let templateParams = {
+        senderName: "مهدی علیخانی",
+        message: `🏢 ورود به شرکت آی تی مبنا                                            🕰️ ساعت ${timeNow}`,
+    };
 
-//     emailjs.send('service_way4a31', 'template_il71eei', templateParams)
-//         .then(function (response) {
-//             alert('گزارش داده شد!', response.status, response.text);
-//         }, function (error) {
-//             alert('به مشکل بر خوردید!', error);
-//         });
-// }
+    emailjs.send('service_way4a31', 'template_il71eei', templateParams)
+        .then(function (response) {
+            alert('گزارش داده شد!', response.status, response.text);
+        }, function (error) {
+            alert('به مشکل بر خوردید!', error);
+        });
+}
 
 
 const success = (position) => {
@@ -39,7 +39,7 @@ const success = (position) => {
 
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
         myLocation.textContent = "Your at Home";
-        // sendMail();
+        sendMail();
 
     } else {
         myLocation.textContent = "Your Not at Home";
