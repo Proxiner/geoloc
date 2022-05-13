@@ -32,14 +32,13 @@ function sendMail() {
 
 const success = (position) => {
 
-    // let result = document.querySelector("#result");
     let myLocation = document.querySelector("#location");
     const coords = position.coords;
-    // result.textContent = `Your Lattidude : ${coords.latitude} & Longitude : ${coords.longitude}`;
+    alert(`Your Lattidude : ${coords.latitude} & Longitude : ${coords.longitude}`);
 
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
         myLocation.textContent = "Your at Home";
-        sendMail();
+        // sendMail();
 
     } else {
         myLocation.textContent = "Your Not at Home";
