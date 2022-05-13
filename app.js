@@ -1,6 +1,6 @@
 let locations = {
-    homeLat: 35.6704406,
-    homeLong: 51.0401188,
+    homeLat: 35.678715,
+    homeLong: 51.0417084,
     officeLat: null,
     officeLong: null,
 }
@@ -32,10 +32,10 @@ let timeNow = today.getHours() + ":" + ("0" + today.getMinutes()).slice(-2);
 
 const success = (position) => {
 
-    let result = document.querySelector("#result");
+    // let result = document.querySelector("#result");
     let myLocation = document.querySelector("#location");
     const coords = position.coords;
-    result.textContent = `Your Lattidude : ${coords.latitude} & Longitude : ${coords.longitude}`;
+    // result.textContent = `Your Lattidude : ${coords.latitude} & Longitude : ${coords.longitude}`;
 
     if (coords.latitude === locations.homeLat && coords.longitude === locations.homeLong) {
         myLocation.textContent = "Your at Home";
